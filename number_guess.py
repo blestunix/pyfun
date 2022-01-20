@@ -24,7 +24,7 @@ def main():
             print("High")
         attempts += 1
 
-    print(f"You guessed the correct number in {attempts}.")
+    print(f"You guessed the correct number in {attempts} attempt{'s' if attempts > 1 else ''}.")
 
 
 if __name__ == '__main__':
