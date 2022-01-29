@@ -7,14 +7,20 @@ class LinkedList:
   def __init__(self):
     self.head = None
   
-  def insertHead(data):
+  def insertHead(self, data):
     self.head = Node(data, self.head)
     
-  def insertTail(data):
+  def insertTail(self, data):
     if self.head is None:
       return self.inserHead(data)
     trav = self.head
-    while trav.next:
+    while trav.nxt:
       trav = trav.nxt
-    trav.next = Node(data)
+    trav.nxt = Node(data)
+  
+  def display(self):
+    node = self.head
+    while node:
+      print(node.val)
+      node = node.nxt
     
