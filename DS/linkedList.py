@@ -41,3 +41,16 @@ class LinkedList:
       node = node.nxt
     print("*" * 25, "   End    ", "*" * 25)
     print()
+
+    def is_empty(self):
+      return self.head is None
+
+ll = LinkedList()
+ll.insertHead(5)
+ll.insertTail(10)
+print(ll.is_empty())
+ll.display()
+ll.removeTail()
+ll.removeTail()
+ll.display()
+print(ll.is_empty())
