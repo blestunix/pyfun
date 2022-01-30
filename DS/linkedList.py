@@ -18,9 +18,26 @@ class LinkedList:
       trav = trav.nxt
     trav.nxt = Node(data)
   
+  def removeHead(self):
+    self.head = self.head.nxt
+    
+  def removeTail(self):
+    if self.head:
+      if self.head.nxt:
+        trav = self.head
+        while trav.nxt.nxt:
+          trav = trav.nxt
+        trav.nxt = None
+      else:
+        self.removeHead()
+    else:
+      print("LL has no head")
+
   def display(self):
     node = self.head
+    print("*" * 25, "Current LL", "*" * 25)
     while node:
       print(node.val)
       node = node.nxt
-    
+    print("*" * 25, "   End    ", "*" * 25)
+    print()
