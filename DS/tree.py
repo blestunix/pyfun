@@ -10,4 +10,14 @@ class Tree:
                 return
         child.parent = self
         self.children.append(child)
+    
+        def display(self):
+        # bfs
+        q = [self]
 
+        while q:
+            curr = q.pop(0)
+            print(curr.data, end='\t')
+            q.extend(curr.children)
+        print('\n')
+            
